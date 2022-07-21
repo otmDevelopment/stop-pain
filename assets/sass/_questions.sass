@@ -1,0 +1,82 @@
+.question
+    padding-bottom: 50px
+    padding-top: 50px
+    &__header
+        font-size: 25px
+        font-weight: bold
+        margin: 0 auto
+        text-align: center
+        text-transform: uppercase
+        cursor: pointer
+    &__header span
+        border-bottom: 4px solid $main-color
+
+    &__icon img
+        width: 45%
+        height: 70%
+    &__subheader-wrapper
+        display: flex
+        align-items: center
+        flex-direction: column
+        margin-top: 10px
+        &:first-child
+            margin-top: 25px
+    &__header__text
+        position: relative
+        font-size: 27px
+        text-transform: uppercase
+        width: 95%
+        background-color: $main-color
+        padding-top: 8px
+        padding-bottom: 8px
+        padding-left: 12px
+        margin-left: 60px
+        &::before
+            content: ''
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 48px
+            height: 48px
+            background: url('../icons/question.png') center center/cover no-repeat
+            background-size: 40%
+            background-color: Black
+            position: absolute
+            left: -57px
+            top: 0%
+
+    &__tab__text
+        background-color: #ebebeb
+        max-height: 0
+        opacity: 0
+        position: relative
+        transition: all 1s
+
+        &:after
+
+            content: ''
+            width: 0
+            height: 0
+            border-top: 30px solid #ebebeb
+            border-right: 40px solid transparent
+            position: absolute
+            right: -40px
+            top: 0
+
+    &__tab__text.active-content
+
+        opacity: 1
+        padding: 10px 30px 10px 20px
+        margin-left: 60px
+        width: 95%
+        margin-top: 16px
+
+.hide
+    display: none
+
+.active
+    display: block
+
+.animate__animated.animate__fadeOut
+
+    --animate-duration: 0.5s
