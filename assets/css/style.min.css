@@ -191,9 +191,15 @@
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+  max-width: 60%;
+  margin-left: auto;
 }
 .slider__high-content-wrapper_small {
   display: none;
+}
+.slider__image_small img {
+    margin-right: auto;
+    max-width: 100%;
 }
 .slider__line_small {
   height: 47px;
