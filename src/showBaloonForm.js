@@ -1,7 +1,9 @@
+import { createWidgetButton } from "./createWidgetButton.js";
+
 export const showBaloonFrom = () => {
   const map = document.querySelector("#map");
   const ballonForm = document.querySelector(".popup_main-popup");
-  const ballonInput = document.querySelector(".baloon-input");
+
   const formAdress = document.querySelector(".map-adress");
 
   map.addEventListener("click", (e) => {
@@ -11,7 +13,7 @@ export const showBaloonFrom = () => {
 
       ballonForm.value = "";
       ballonForm.classList.add("show");
-      ballonInput.value = document.querySelector(".map-clinic-adress").textContent;
+
       formAdress.innerHTML = `<h4 class ="form-title">${baloontitle.textContent}</h4>
       <span class ="form-adress">${baloonAdress.textContent}</span>
       `;

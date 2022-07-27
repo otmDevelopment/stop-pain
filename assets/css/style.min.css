@@ -6,9 +6,6 @@
   box-sizing: border-box;
   font-family: "Roboto";
 }
-button {
-  cursor: pointer;
-}
 .container {
   max-width: 1140px;
   margin: 0 auto;
@@ -58,9 +55,9 @@ button {
 }
 .header__help {
   text-transform: uppercase;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 500;
-  width: 190px;
+  width: 240px;
 }
 .header__button a {
   text-decoration: none;
@@ -141,7 +138,7 @@ button {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-top: 55px;
+  margin-top: 25%;
 }
 .slider__button a {
   display: block;
@@ -275,6 +272,8 @@ button {
 .problems__cards img {
   width: 100%;
   height: 360px;
+  object-fit: cover;
+  object-position: bottom 50%;
 }
 .problems__cards-text {
   width: 100%;
@@ -545,7 +544,7 @@ button {
     height: 96px;
   }
   .navigation__text-item {
-    font-size: 11px;
+    font-size: 14px;
     padding-right: 40px;
   }
   .problems__cards-text {
@@ -561,7 +560,7 @@ button {
 }
 @media (max-width: 937px) {
   .navigation__text-item {
-    font-size: 11px;
+    font-size: 14px;
     padding-right: 32px;
   }
 }
@@ -579,9 +578,9 @@ button {
     width: 483px;
   }
   .header__help {
-    width: 160px;
-    -ms-flex-preferred-size: 40%;
-    flex-basis: 40%;
+    width: 300px;
+    ml20
+  
   }
   .header__logo img {
     max-width: 32px;
@@ -695,7 +694,7 @@ button {
     width: 100%;
   }
   .problems__cards-text {
-    font-size: 11px;
+    font-size: 14px;
   }
   .problems__back,
   .problems__cards__vitamins,
@@ -739,7 +738,7 @@ button {
     text-decoration: none;
     color: black;
     text-transform: uppercase;
-    font-size: 11px;
+    font-size: 14px;
     font-weight: 600;
     padding-left: 10px;
     padding-right: 10px;
@@ -903,6 +902,7 @@ button {
   }
   .header__site {
     display: block;
+    margin-left: 10px;
   }
   .header__left-wrapper {
     width: 500px;
@@ -965,15 +965,13 @@ button {
 }
 @media (max-width: 551px) {
   .question__tab__text {
-    font-size: 11px;
+    font-size: 14px;
   }
   .problems__header,
   .question__header span {
     font-size: 18px;
   }
-  .footer__text_left {
-    max-width: 133px;
-  }
+
   .header__help {
     display: none;
   }
@@ -1009,7 +1007,7 @@ button {
     padding-bottom: 3px;
   }
   .question__header__text {
-    font-size: 11px;
+    font-size: 14px;
   }
   .problems__main-wrapper {
     -webkit-box-orient: vertical;
@@ -1086,9 +1084,7 @@ button {
     background-size: 30%;
     left: -35px;
   }
-  .footer__text_left {
-    max-width: 76px;
-  }
+
   .question__tab__text {
     margin-left: 32px;
   }
@@ -1129,7 +1125,7 @@ button {
     flex-basis: 60%;
   }
   .problems__cards-text {
-    font-size: 5px;
+    
   }
   .header__site {
     font-size: 16px;
@@ -1165,6 +1161,10 @@ button {
 }
 .about__image img {
   width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  object-position: 50% 50%;
+
 }
 .about__border {
   -webkit-box-align: center;
@@ -1374,11 +1374,7 @@ img {
     max-width: 700px;
   }
 }
-@media (max-width: 902px) {
-  .footer__text_left {
-    width: 210px;
-  }
-}
+
 @media (max-width: 881px) {
   .about__problems {
     height: 2rem;
@@ -1408,7 +1404,7 @@ img {
 }
 @media (max-width: 834px) {
   .about__problems {
-    font-size: 11px;
+    font-size: 14px;
   }
 }
 @media (max-width: 749px) {
@@ -1582,7 +1578,7 @@ img {
     padding-top: 0;
   }
   .about__border {
-    font-size: 11px;
+    font-size: 14px;
   }
   .book__text {
     max-width: 214px;
@@ -1637,10 +1633,10 @@ img {
   .about__border {
   }
   .footer__text_bottom {
-    font-size: 11px;
+    font-size: 14px;
   }
   .problems__cards-text {
-    font-size: 5px;
+    
   }
 }
 .write {
@@ -1699,21 +1695,21 @@ img {
     margin-left: 0;
     margin-top: 15px;
   }
+  .search__input {
+    padding: 6px;
+    padding-left: 10px;
+    margin: 10px auto;
+  }
 }
 
 @media (max-width: 500px) {
   .map__header {
     font-size: 15px;
   }
-  .search__select {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-  }
 }
 @media (max-width: 380px) {
   .map__main-header {
-    font-size: 5px;
+    
   }
 }
 
@@ -1791,6 +1787,12 @@ img {
   padding: 10px 15px;
   text-transform: uppercase;
 }
+.search__image {
+  margin-top: 20px;
+}
+.button-baloon {
+margin-top: 15px;
+}
 
 .main-btn_gray {
   background-color: #cecece;
@@ -1803,36 +1805,9 @@ img {
 .main-form__item:not(:first-child) {
   margin-top: 15px;
 }
-.main-form__item:last-child {
-  margin-top: 20px;
-}
 .main-form__input {
   padding: 10px 15px;
   border: 1px solid #707070;
   border-radius: 25px;
   margin-top: 5px;
-}
-
-.main-popup__title {
-font-size: 24px;
-}
-
-.form-title {
-  font-size: 20px;
-}
-.form-adress {
-  display: block;
-  font-size: 14px;
-  margin-top: 5px;
-}
-
-.map-name:not(:first-child) {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  padding-top: 20px;
-  border-top: 1px solid #ebebeb;
-}
-
-.search__image {
-margin-top: 20px;
 }

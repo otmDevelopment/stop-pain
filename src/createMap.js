@@ -4,6 +4,7 @@ import { getMetro } from "./getMetro.js";
 import { deleteAllOptions } from "./deleteMetro.js";
 import { getDists } from "./getDists.js";
 import { showBaloonFrom } from "./showBaloonForm.js";
+import { createWidgetButton } from "./createWidgetButton.js";
 
 export const createMap = () => {
   const ymaps = window.ymaps;
@@ -90,6 +91,22 @@ export const createMap = () => {
             placemark.events.add("click", function (e) {
               const coords = e.get("coords");
 
+              const widgBtn = document.querySelector(".dd-button");
+
+              if (widgBtn) {
+                const oldAttribute = widgBtn.getAttribute("data-call-widget");
+                const sliceOldAttribute = oldAttribute.slice(0, 80);
+                widgBtn.removeAttribute("data-call-widget");
+
+                widgBtn.setAttribute(
+                  "data-call-widget",
+                  sliceOldAttribute +
+                    `"clinicId":"${item.clinicId[0]}","doctorId":"${item.doctorId}","diagnosticId":null,"type":"Doctor","specialities":[],"specialityId":null}`
+                );
+              }
+
+              createWidgetButton(item.alyas, item.clinicId[0], item.doctorId);
+
               map.panTo(coords, {
                 //////////АНИМАЦИЯ ПЕРЕХОДА К ТОЧКЕ ПО КЛИКУ
                 duration: 500,
@@ -118,7 +135,7 @@ export const createMap = () => {
       }
     };
     addPointOnTheMap(false, getCoordByFilter, "city", "Москва");
-  
+
     const citySelect = document.querySelector(".city");
     showBaloonFrom(); //// вешаю обработчик событий на карту, чтобы кнопочка работала
     citySelect.addEventListener("change", (e) => {
